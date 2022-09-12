@@ -33,6 +33,8 @@ func _input(event):
 		elif event.scancode == KEY_R:
 			rigidBody().rotation = initialRotation
 			rigidBody().translation = initialTranslation
+			rigidBody().linear_velocity = Vector3.ZERO
+			rigidBody().angular_velocity = Vector3.ZERO
 			rigidBody().gravity_scale = 0.0
 		elif event.scancode == KEY_SPACE:
 			rigidBody().gravity_scale = 1.0
