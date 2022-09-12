@@ -12,8 +12,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var direction = Vector3.ZERO
-	
+
 	if Input.is_key_pressed(KEY_RIGHT):
 		rotationVelocity.y += 0.1 * delta
 	if Input.is_key_pressed(KEY_LEFT):
