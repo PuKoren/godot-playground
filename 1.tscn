@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://FirstScript.gd" type="Script" id=1]
+
+[sub_resource type="CapsuleMesh" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 0.2, 0, 0, 0, -1.18021e-08, -0.27, 0, 0.216, -9.44166e-09, 0.0317032, 0.107344, -2.67537 )
+mesh = SubResource( 1 )
+script = ExtResource( 1 )
