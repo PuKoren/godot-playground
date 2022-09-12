@@ -32,3 +32,5 @@ func _input(event):
 		elif event.scancode == KEY_R:
 			self.rotation = initialRotation
 			rotationVelocity = Vector3.ZERO
+		elif event.scancode == KEY_SPACE:
+			self.get_parent().gravity_scale = 1.0
