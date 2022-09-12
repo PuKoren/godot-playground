@@ -24,10 +24,11 @@ func _process(delta):
 	
 	self.rotate(Vector3.FORWARD, rotationVelocity.y)
 	self.rotate(Vector3.RIGHT, rotationVelocity.x)
-	
-	if Input.is_key_pressed(KEY_R):
-		self.rotation = initialRotation
-		rotationVelocity = Vector3.ZERO
 
-	if Input.is_key_pressed(KEY_ESCAPE):
-		self.get_tree().quit()
+func _input(event):
+	if event is InputEventKey and event.pressed:
+		if event.scancode == KEY_ESCAPE:
+			self.get_tree().quit()
+		elif event.scancode == KEY_R:
+			self.rotation = initialRotation
+			rotationVelocity = Vector3.ZERO
