@@ -28,3 +28,6 @@ func _process(delta):
 	if Input.is_key_pressed(KEY_R):
 		self.rotation = initialRotation
 		rotationVelocity = Vector3.ZERO
+
+	if Input.is_key_pressed(KEY_ESCAPE):
+		self.get_tree().quit()
